@@ -1,2 +1,2 @@
 # LearnGolangInHackerRand
-practice golang &lt;a herf="https://www.hackerrank.com">HackerRand&lt;/a>
+practice golang [HackerRand](https://www.hackerrank.com)
