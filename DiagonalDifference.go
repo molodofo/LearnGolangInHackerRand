@@ -19,7 +19,7 @@ Sample Output
 15
 
 Explanation
-The primary diagonal is: 
+The primary diagonal is:
 11
       5
             -12
@@ -30,34 +30,35 @@ The secondary diagonal is:
             4
       5
 10
-Sum across the secondary diagonal: 4 + 5 + 10 = 19 
+Sum across the secondary diagonal: 4 + 5 + 10 = 19
 Difference: |4 - 19| = 15
 */
 package main
+
 import "fmt"
 
 func main() {
- //Enter your code here. Read input from STDIN. Print output to STDOUT
-    n := 0
-    fmt.Scanf("%d", &n)
-    matrix := make([][]int, n)
-    for i:=0; i<n; i++ {
-        matrix[i] = make([]int, n)
-    }
-    for i:=0; i<n; i++ {
-        for j:=0; j<n; j++ {
-            fmt.Scanf("%d", &matrix[i][j])
-        }
-    }
-    diff := 0
-    for i:=0; i<n; i++ {
-        diff += matrix[i][i]
-    }
-    for i:=0; i<n; i++ {
-        diff -= matrix[i][n-1-i]
-    }
-    if diff < 0 {
-        diff = -diff
-    }
-    fmt.Println(diff)
+	//Enter your code here. Read input from STDIN. Print output to STDOUT
+	n := 0
+	fmt.Scanf("%d", &n)
+	matrix := make([][]int, n)
+	for i := 0; i < n; i++ {
+		matrix[i] = make([]int, n)
+	}
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			fmt.Scanf("%d", &matrix[i][j])
+		}
+	}
+	diff := 0
+	for i := 0; i < n; i++ {
+		diff += matrix[i][i]
+	}
+	for i := 0; i < n; i++ {
+		diff -= matrix[i][n-1-i]
+	}
+	if diff < 0 {
+		diff = -diff
+	}
+	fmt.Println(diff)
 }
